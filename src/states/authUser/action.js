@@ -1,8 +1,8 @@
-import api from "../../utils/api";
+import api from '../../utils/api';
 
 const ActionType = {
-  SET_AUTH_USER: "SET_AUTH_USER",
-  UNSET_AUTH_USER: "UNSET_AUTH_USER",
+  SET_AUTH_USER: 'SET_AUTH_USER',
+  UNSET_AUTH_USER: 'UNSET_AUTH_USER',
 };
 
 function setAuthUserActionCreator(authUser) {
@@ -39,7 +39,7 @@ function asyncSetAuthUser({ id, password }) {
 function asyncUnsetAuthUser() {
   return (dispatch) => {
     dispatch(unsetAuthUserActionCreator());
-    api.putAccessToken("");
+    api.putAccessToken('');
   };
 }
 

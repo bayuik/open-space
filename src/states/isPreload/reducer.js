@@ -1,4 +1,4 @@
-import { ActionType } from "./action";
+import { ActionType } from './action';
 
 function isPreLoadReducer(isPreLoad = true, action = {}) {
   switch (action.type) {
