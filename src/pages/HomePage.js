@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import TalkInput from '../components/TalkInput';
 import TalksList from '../components/TalksList';
-import { useDispatch, useSelector } from 'react-redux';
 import { asyncPopulateUsersAndTalks } from '../states/shared/action';
 import { asyncAddTalk, asyncToggleLikeTalk } from '../states/talks/action';
+
 function HomePage() {
   const { talks = [], users = [], authUser } = useSelector((states) => states);
 
